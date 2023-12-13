@@ -1,4 +1,4 @@
-Assignment 1: Practicing Components
+# Assignment 1: Practicing Components
 
 1. Create two new components (manually or with CLI): WarningAlert and SuccessAlert
 2. Output them beneath each other in the AppComponent
