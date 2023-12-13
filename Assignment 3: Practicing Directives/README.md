@@ -1,4 +1,4 @@
-Assignment 3: Practicing Directives
+# Assignment 3: Practicing Directives
 
 1. Add A button which says 'Display Details'
 2. Add a paragraph with any contents of your choice (e.g. 'Secret Password = tuna')
