@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12">
       <ol>
-        <li>Assignment 3</li> 
+        Assignment 3
         <li>Add A button which says 'Display Details'</li>
         <li>Add a paragraph with any contents of your choice (e.g. 'Secret Password = tuna')</li>
         <li>Toggle the displaying of that paragraph with the button created in the first step</li>
@@ -10,13 +10,14 @@
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
       <hr>
-    <label>Username </label>
-    <input type="text" class="form-control" [(ngModel)]="username"> <!-- Two-Way-Binding -->
-    <p>{{username}}</p>
-    <button 
-    class="btn btn-primary" 
-    [disabled]="username === ''" 
-    (click)="username = ''">Reset User</button> <!-- (===) means check something while (=) means assign a value-->
+      <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret"> Display Details</button>> -->
+      <button class="btn btn-primary" (click)="onToggleDetails()"> Display Details</button>
+      <p *ngIf="showSecret">Secret Password = tuna</p>
+      <div 
+      *ngFor="let logItem of log"
+      [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': logItem >= 5}"
+      >{{ logItem }}</div> <!-- String Interpolation to output log item -->
     </div>
   </div>
 </div>
